@@ -1,3 +1,5 @@
+// learn how to install, use and call packages
+
 package main
 
 import (

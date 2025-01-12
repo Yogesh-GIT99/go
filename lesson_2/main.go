@@ -1,3 +1,5 @@
+// learn how to use path seperator function and define variables
+
 package main
 
 import (
