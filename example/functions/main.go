@@ -5,48 +5,72 @@ import (
 	"math"
 )
 
+const inflationRate = 2.5
+
+// declaring a variable
+
 func main() {
 
-	const inflationRate = 2.5
-	var investmentAmount float64 // declaring a variable
-	var expectedReturnRate float64
-	var years float64
-
 	// fmt.Print("Investment Amount: ")
-	printmsg("Investment Amount: ")
-	fmt.Scan(&investmentAmount) // take user input
+	// fmt.Scan(&investmentAmount) // take user input
+
+	investmentAmount := investmentAmt("Investment Amount: ")
 
 	// fmt.Print("Expected Return Rate: ")
-	printmsg("Expected Return Rate: ")
+	// fmt.Scan(&expectedReturnRate)
+	expectedReturnRate := expectedReturnRt("Expected Return Rate: ")
+
+	// fmt.Print("Years: ")
+	// fmt.Scan(&years)
+	years := yr("Years: ")
+
+	// var futureValue = investmentAmount * math.Pow(1+expectedReturnRate/100, years)
+	// var futureRealValue = futureValue / math.Pow(1+inflationRate/100, years)
+	futureValue, futureRealValue := valueCalc(investmentAmount, expectedReturnRate, years)
+
+	// fmt.Println("futureValue: ", futureValue)
+	// fmt.Println("futureRealValue: ", futureRealValue)
+
+	prnt(futureValue, futureRealValue)
+}
+
+func investmentAmt(msg string) float64 {
+	var investmentAmount float64
+	fmt.Print(msg)
+	fmt.Scan(&investmentAmount)
+
+	return investmentAmount
+}
+
+func expectedReturnRt(msg string) float64 {
+	var expectedReturnRate float64
+	fmt.Print(msg)
 	fmt.Scan(&expectedReturnRate)
 
-	fmt.Print("Years: ")
+	return expectedReturnRate
+}
+
+func yr(msg string) float64 {
+	var years float64
+	fmt.Print(msg)
 	fmt.Scan(&years)
 
-	var f = futureValue(investmentAmount, expectedReturnRate, years)
-	var frv = futureRealValue(f, inflationRate, years)
-
-	fmt.Println("futureValue: ", f)
-	fmt.Println("futureRealValue: ", frv)
+	return years
 }
 
-func printmsg(x string) {
-
-	fmt.Print(x)
-}
-
-func futureValue(investmentAmount float64, expectedReturnRate float64, years float64) float64 {
+func valueCalc(investmentAmount, expectedReturnRate, years float64) (float64, float64) {
 
 	var futureValue = investmentAmount * math.Pow(1+expectedReturnRate/100, years)
+	var futureRealValue = futureValue / math.Pow(1+inflationRate/100, years)
 
-	return futureValue
+	return futureValue, futureRealValue
+
 }
 
-func futureRealValue(f float64, inflationRate float64, years float64) float64 {
+func prnt(futureValue, futureRealValue float64) {
 
-	var FRV = f / math.Pow(1+inflationRate/100, years)
-
-	return FRV
+	fmt.Printf("futureValue: %0.2f\n", futureValue)
+	fmt.Printf("futureRealValue: %0.2f", futureRealValue)
 
 }
 
