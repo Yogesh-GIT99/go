@@ -1,0 +1,1 @@
+# Create a function factorial that calculates the factorial of a given number using a loop.
