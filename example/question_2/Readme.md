@@ -1,0 +1,1 @@
+# Write a function sumUpTo that takes an integer n and returns the sum of all numbers from 1 to n.
