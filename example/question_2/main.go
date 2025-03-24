@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	fmt.Println(sumUpTo(11))
+	fmt.Println(sumUpTo(2))
 
 }
 
