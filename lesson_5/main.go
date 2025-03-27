@@ -4,11 +4,12 @@ import "fmt"
 
 func main() {
 
+	fmt.Println("Welcome to the bank app !")
+
 	for {
 
 		accountBalance := 1000.00
 
-		fmt.Println("Welcome to the bank app !")
 		fmt.Println("What do you want to do ? ")
 		fmt.Println("1. Check Account Balance")
 		fmt.Println("2. Deposit money")
@@ -30,7 +31,7 @@ func main() {
 
 			if deposit <= 0 {
 				fmt.Print("Invalid Amount! should be greater that 0")
-				return
+				continue
 			}
 
 			accountBalance = accountBalance + deposit
@@ -43,13 +44,13 @@ func main() {
 			fmt.Scan(&withdrawl)
 
 			if withdrawl <= 0 {
-				fmt.Print("Invalid Amount! should be greater that 0")
-				return
+				fmt.Printf("Invalid Amount! should be greater that 0")
+				continue
 			}
 
 			if withdrawl > accountBalance {
 				fmt.Printf("You cannot withdraw more than account balance. AccountBalance: %v", accountBalance)
-				return
+				continue
 			}
 
 			accountBalance = accountBalance - withdrawl
@@ -58,10 +59,12 @@ func main() {
 
 		} else if choose == 4 {
 
-			fmt.Print("Bye, Have a good day!")
+			fmt.Println("Bye, Have a good day!")
 			break
 		}
 
 	}
+
+	fmt.Println("Dubara ana bank mai !")
 
 }
