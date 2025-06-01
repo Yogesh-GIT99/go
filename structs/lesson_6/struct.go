@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"time"
 )
@@ -25,12 +24,7 @@ type user struct { // defining a struct
 // 	}
 // }
 
-func newuser(firstName, lastName, birthDate string) (*user, error) { // with pointer
-
-	if firstName == "" || lastName == "" || birthDate == "" { // can also add a validation to a constructer
-		return nil, errors.New("firstName, lastName and birthDate should not be empty")
-
-	}
+func newuser(firstName, lastName, birthDate string) *user { // with pointer
 
 	return &user{
 
@@ -38,7 +32,7 @@ func newuser(firstName, lastName, birthDate string) (*user, error) { // with poi
 		lastName:    lastName,
 		birthDate:   birthDate,
 		currentTime: time.Now(),
-	}, nil
+	}
 
 }
 
@@ -63,12 +57,7 @@ func main() {
 
 	// var appUser user
 
-	appUser, err := newuser(userfirstName, userlastName, userbirthdate)
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+	appUser := newuser(userfirstName, userlastName, userbirthdate)
 
 	appUser.outputUserData() // passing instanciated values to function using pointer
 	appUser.cleanuserData()
@@ -78,6 +67,6 @@ func main() {
 func getUserData(promptText string) string {
 	fmt.Print(promptText)
 	var value string
-	fmt.Scanln(&value)
+	fmt.Scan(&value)
 	return value
 }
