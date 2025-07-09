@@ -15,8 +15,7 @@ type user struct { // defining a struct
 
 func (u user) outputUserData() { // defining parameters using struct using pointer
 
-	// fmt.Println((*u).firstName, (*u).lastName, (*u).birthDate) // calling out struct values using pointer the real way
-	fmt.Println(u.firstName, u.lastName, u.birthDate) // this is not correct though but go supports this syntax for the ease of writing code.
+	fmt.Println(u.firstName, u.lastName, u.birthDate)
 
 }
 
@@ -24,8 +23,6 @@ func main() {
 	userfirstName := getUserData("Please enter your first name: ")
 	userlastName := getUserData("Please enter your last name: ")
 	userbirthdate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
-
-	// ... do something awesome with that gathered data!
 
 	// var appUser user
 

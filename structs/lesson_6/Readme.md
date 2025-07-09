@@ -1,2 +1,2 @@
-# Using contructor function for validation
+# Structs, Packages and exports
 

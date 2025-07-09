@@ -2,51 +2,8 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"structs/lesson_6/user"
 )
-
-type user struct { // defining a struct
-
-	firstName   string
-	lastName    string
-	birthDate   string
-	currentTime time.Time
-}
-
-// func newuser(firstName, lastName, birthDate string) user {
-
-// 	return user{
-
-// 		firstName:   firstName,
-// 		lastName:    lastName,
-// 		birthDate:   birthDate,
-// 		currentTime: time.Now(),
-// 	}
-// }
-
-func newuser(firstName, lastName, birthDate string) *user { // with pointer
-
-	return &user{
-
-		firstName:   firstName,
-		lastName:    lastName,
-		birthDate:   birthDate,
-		currentTime: time.Now(),
-	}
-
-}
-
-func (u *user) outputUserData() { // defining parameters using struct using pointer
-
-	// fmt.Println((*u).firstName, (*u).lastName, (*u).birthDate) // calling out struct values using pointer the real way
-	fmt.Println(u.firstName, u.lastName, u.birthDate) // this is not correct though but go supports this syntax for the ease of writing code.
-
-}
-
-func (u *user) cleanuserData() {
-	u.firstName = ""
-	u.lastName = ""
-}
 
 func main() {
 	userfirstName := getUserData("Please enter your first name: ")
@@ -57,7 +14,7 @@ func main() {
 
 	// var appUser user
 
-	appUser := newuser(userfirstName, userlastName, userbirthdate)
+	appUser, err := &user.Newuser(userfirstName, userlastName, userbirthdate)
 
 	appUser.outputUserData() // passing instanciated values to function using pointer
 	appUser.cleanuserData()

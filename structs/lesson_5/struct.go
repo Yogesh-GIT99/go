@@ -44,8 +44,7 @@ func newuser(firstName, lastName, birthDate string) (*user, error) { // with poi
 
 func (u *user) outputUserData() { // defining parameters using struct using pointer
 
-	// fmt.Println((*u).firstName, (*u).lastName, (*u).birthDate) // calling out struct values using pointer the real way
-	fmt.Println(u.firstName, u.lastName, u.birthDate) // this is not correct though but go supports this syntax for the ease of writing code.
+	fmt.Println(u.firstName, u.lastName, u.birthDate)
 
 }
 
