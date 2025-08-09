@@ -16,6 +16,11 @@ func main() {
 
 	appUser, err := &user.Newuser(userfirstName, userlastName, userbirthdate)
 
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
 	appUser.outputUserData() // passing instanciated values to function using pointer
 	appUser.cleanuserData()
 	appUser.outputUserData()

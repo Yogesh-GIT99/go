@@ -1,6 +1,7 @@
 package user
 
 import (
+	"errors"
 	"fmt"
 	"time"
 )
@@ -13,7 +14,12 @@ type User struct { // defining a struct
 	currentTime time.Time
 }
 
-func Newuser(firstName, lastName, birthDate string) *User { // with pointer
+func Newuser(firstName, lastName, birthDate string) (*User, error) { // with pointer
+
+	if firstName == "" || lastName == "" || birthDate == "" {
+
+		return nil, errors.New("firstName, lastName and birthDate should not be empty")
+	}
 
 	return &User{
 
@@ -21,7 +27,7 @@ func Newuser(firstName, lastName, birthDate string) *User { // with pointer
 		lastName:    lastName,
 		birthDate:   birthDate,
 		currentTime: time.Now(),
-	}
+	}, nil
 
 }
 
