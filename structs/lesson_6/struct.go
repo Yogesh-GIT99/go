@@ -14,16 +14,16 @@ func main() {
 
 	// var appUser user
 
-	appUser, err := &user.Newuser(userfirstName, userlastName, userbirthdate)
+	appUser, err := user.Newuser(userfirstName, userlastName, userbirthdate)
 
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 
-	appUser.outputUserData() // passing instanciated values to function using pointer
-	appUser.cleanuserData()
-	appUser.outputUserData()
+	appUser.OutputUserData() // passing instanciated values to function using pointer
+	appUser.CleanuserData()
+	appUser.OutputUserData()
 }
 
 func getUserData(promptText string) string {

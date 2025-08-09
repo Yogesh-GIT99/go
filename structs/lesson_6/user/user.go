@@ -31,13 +31,13 @@ func Newuser(firstName, lastName, birthDate string) (*User, error) { // with poi
 
 }
 
-func (u *User) outputUserData() {
+func (u *User) OutputUserData() {
 
 	fmt.Println(u.firstName, u.lastName, u.birthDate)
 
 }
 
-func (u *User) cleanuserData() {
+func (u *User) CleanuserData() {
 	u.firstName = ""
 	u.lastName = ""
 }
