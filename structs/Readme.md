@@ -1,4 +1,4 @@
-# Structs
+# Structs: 4
 
 1. What are structs ? 
 - Helps us to group related together to one single value. 

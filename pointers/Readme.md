@@ -1,4 +1,4 @@
-# Pointers
+# Pointers: 3
 
 * What are pointers ? 
 - variables that stores value addresses instead of values.

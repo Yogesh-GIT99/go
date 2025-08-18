@@ -1,4 +1,4 @@
-# Foundation lessons:
+# Foundation lessons: 1
 
 1. Values and Types
 2. Functions
