@@ -1,0 +1,1 @@
+# implementing interfaces to struct example code
