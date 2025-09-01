@@ -21,8 +21,8 @@ type outputter interface { // interface embedding
 
 func main() {
 
-	printSomething("This is testing app:")
-	printSomething(1.5)
+	printSomething("This is testing app:") // testing
+	printSomething(1.5)                    // testing
 
 	title, body, err := checkInput()
 
@@ -103,6 +103,6 @@ func checkInput() (string, string, error) {
 	return title, body, nil
 }
 
-func printSomething(value interface{}) {
+func printSomething(value interface{}) { // special interface that accept any type / any value allowed
 	fmt.Println(value)
 }
