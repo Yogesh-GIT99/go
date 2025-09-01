@@ -21,6 +21,9 @@ type outputter interface { // interface embedding
 
 func main() {
 
+	printSomething("This is testing app:")
+	printSomething(1.5)
+
 	title, body, err := checkInput()
 
 	if err != nil {
@@ -98,4 +101,8 @@ func checkInput() (string, string, error) {
 	}
 
 	return title, body, nil
+}
+
+func printSomething(value interface{}) {
+	fmt.Println(value)
 }
