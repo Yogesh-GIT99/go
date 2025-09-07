@@ -14,4 +14,11 @@ func main() {
 	stations := station[:1]
 
 	fmt.Println(stations)
+	fmt.Println(len(stations), cap(stations)) // 1 3 output represent len count the content and cap counts the remaining space to right. ( it doesnot account what was sliced from left, but what is left at right side)
+
+	stations = stations[:3]
+	fmt.Println(stations)
+	fmt.Println(len(stations), cap(stations)) // 3 3 justifies what we have disscused in the previous line. there is capacity left on the right side, which can be extended since array was [4]
+	// slice is part of array/ref to a array ( similar what happens in pointer ), golang does not create another mem location for slices, it ref to the same array.
+
 }
