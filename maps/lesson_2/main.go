@@ -27,4 +27,24 @@ func main() {
 	tvs["samsung"] = 5
 
 	tvs.output()
+
+	// for loop with array/slices
+
+	// for range fruits  ( can use like this if we donot care about index and values seperately)
+	for index, value := range fruits {
+
+		// any other logic ..
+		fmt.Println("Index: ", index)
+		fmt.Println("Value: ", value)
+	}
+
+	// for loop with map
+
+	for key, value := range tvs {
+
+		// any other logic ..
+		fmt.Println("Key: ", key)
+		fmt.Println("Value: ", value)
+	}
+
 }
