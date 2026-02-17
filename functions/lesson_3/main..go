@@ -9,7 +9,7 @@ type transfntype func(int) int
 func main() {
 
 	numbers := []int{1, 2, 3, 4}
-	doubleNumber := transformNumber(&numbers, func(numbers int) int { return numbers * 2 })
+	doubleNumber := transformNumber(&numbers, func(numbers int) int { return numbers * 2 }) // passing anonymous function
 
 	fmt.Println(doubleNumber)
 
