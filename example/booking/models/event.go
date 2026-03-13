@@ -18,7 +18,7 @@ var events = []Event{} // intializing with an empty slice of events
 
 func (e Event) Save() error {
 
-	query := `INSERT INTO events(name, description, location, dateTime, user_id) VALUES(?, ?, ?, ?, ?)`
+	query := `INSERT INTO events(name, description, location, dateTime, userId) VALUES(?, ?, ?, ?, ?)`
 	stmt, err := db.DB.Prepare(query)
 
 	if err != nil {
@@ -39,6 +39,31 @@ func (e Event) Save() error {
 
 }
 
-func GetAllEvents() []Event {
-	return events
+func GetAllEvents() ([]Event, error) {
+
+	query := `SELECT * FROM events`
+	rows, err := db.DB.Query(query)
+
+	if err != nil {
+		return nil, err
+	}
+
+	defer rows.Close()
+
+	var events []Event
+
+	for rows.Next() {
+
+		var event Event
+		err := rows.Scan(&event.ID, &event.Name, &event.Description, &event.Location, &event.Datetime, &event.UserID)
+
+		if err != nil {
+			return nil, err
+		}
+
+		events = append(events, event)
+
+	}
+
+	return events, nil
 }
