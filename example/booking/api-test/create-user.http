@@ -2,7 +2,7 @@ PUT http://localhost:8080/signup
 Content-Type: application/json
 
 {
-    "email": "yogeshrautela101@gmail.com",
+    "email": "yogeshrautela102@gmail.com",
     "password": "12345"
 }
 

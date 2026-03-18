@@ -2,6 +2,7 @@ package routes
 
 import (
 	"booking/models"
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -18,6 +19,7 @@ func signup(context *gin.Context) {
 
 	err = user.Save()
 	if err != nil {
+		fmt.Println(err)
 		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not save the user. Try again ...."})
 		return
 	}
