@@ -3,6 +3,7 @@ package models
 import (
 	"booking/db"
 	"booking/utils"
+	"errors"
 )
 
 type User struct {
@@ -37,4 +38,26 @@ func (user User) Save() error {
 	user.ID = id
 	return err
 
+}
+
+func (user User) ValidateLogin() error {
+	query := `SELECT id, password FROM users WHERE email = ?`
+	row := db.DB.QueryRow(query, user.Email)
+
+	var retrievePassword string
+	err := row.Scan(&user.ID, &retrievePassword)
+
+	if err != nil {
+		//fmt.Println(err)
+		return errors.New("Credentials Invalid !")
+	}
+
+	validatePassword := utils.ComparePassword(retrievePassword, user.Password)
+
+	if !validatePassword {
+		//fmt.Println("password validation failed")
+		return errors.New("Credentials Invalid !")
+	}
+
+	return nil
 }
