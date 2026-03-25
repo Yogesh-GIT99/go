@@ -2,6 +2,7 @@ package routes
 
 import (
 	"booking/models"
+	"booking/utils"
 	"fmt"
 	"net/http"
 	"strconv"
@@ -41,8 +42,23 @@ func getEvent(context *gin.Context) {
 }
 
 func createEvent(context *gin.Context) {
+
+	token := context.Request.Header.Get("Authorization")
+
+	if token == "" {
+		context.JSON(http.StatusUnauthorized, gin.H{"message": "Not Authorized"})
+		return
+	}
+
+	userId, err := utils.VerifyToken(token)
+
+	if err != nil {
+		context.JSON(http.StatusUnauthorized, gin.H{"message": "Not Authorized !"})
+		return
+	}
+
 	var event models.Event
-	err := context.ShouldBindBodyWithJSON(&event)
+	err = context.ShouldBindBodyWithJSON(&event)
 
 	if err != nil {
 		context.JSON(http.StatusBadRequest, gin.H{"message": "could not parse request data. error"})
@@ -50,8 +66,8 @@ func createEvent(context *gin.Context) {
 		return
 	}
 
-	event.ID = 1
-	event.UserID = 1
+	// event.ID = 1 This is autoincreament in db
+	event.UserID = userId
 
 	err = event.Save()
 

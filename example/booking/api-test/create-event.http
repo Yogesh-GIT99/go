@@ -1,5 +1,6 @@
 POST http://localhost:8080/events
 content-type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdXRlbGFAZ21haWwuY29tIiwiZXhwIjoxNzc0NDYzNzk0LCJ1c2VySWQiOjB9.p8R0nIfq6jujtBnx0QYGaa0gzdFIb9uD5pCrOghehu0
 
 {
     "name": "Yogesh",
