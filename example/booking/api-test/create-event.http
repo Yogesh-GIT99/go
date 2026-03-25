@@ -1,10 +1,10 @@
 POST http://localhost:8080/events
 content-type: application/json
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdXRlbGFAZ21haWwuY29tIiwiZXhwIjoxNzc0NDYzNzk0LCJ1c2VySWQiOjB9.p8R0nIfq6jujtBnx0QYGaa0gzdFIb9uD5pCrOghehu0
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdXRlbGEyQGdtYWlsLmNvbSIsImV4cCI6MTc3NDQ2NzI0OSwidXNlcklkIjozfQ.OKdA0TYGegeXkRGFtMAdXtThl2SBW97IChKUU21arLo
 
 {
-    "name": "Yogesh",
-    "description": "Third test event",
+    "name": "SId",
+    "description": "Fifth test event",
     "location": "delhi",
     "dateTime": "2025-01-02T15:30:00.000Z"
 }

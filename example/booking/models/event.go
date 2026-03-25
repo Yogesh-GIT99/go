@@ -2,6 +2,7 @@ package models
 
 import (
 	"booking/db"
+	"fmt"
 	"time"
 )
 
@@ -16,7 +17,7 @@ type Event struct {
 
 var events = []Event{} // intializing with an empty slice of events
 
-func (e Event) Save() error {
+func (e *Event) Save() error {
 
 	query := `INSERT INTO events(name, description, location, dateTime, userId) VALUES(?, ?, ?, ?, ?)`
 	stmt, err := db.DB.Prepare(query)
@@ -26,6 +27,8 @@ func (e Event) Save() error {
 	}
 
 	defer stmt.Close() // connec closing managed by go itself
+
+	fmt.Println("save event", e.UserID)
 
 	result, err := stmt.Exec(e.Name, e.Description, e.Location, e.Datetime, e.UserID)
 

@@ -4,6 +4,7 @@ import (
 	"booking/db"
 	"booking/utils"
 	"errors"
+	"fmt"
 )
 
 type User struct {
@@ -12,7 +13,7 @@ type User struct {
 	Password string `binding:"required"`
 }
 
-func (user User) Save() error {
+func (user *User) Save() error {
 	query := `INSERT INTO users(email, password) VALUES(?, ?)`
 	stmt, err := db.DB.Prepare(query)
 
@@ -35,12 +36,14 @@ func (user User) Save() error {
 	}
 
 	id, err := result.LastInsertId()
+
+	fmt.Println("userID Save func: ", id)
 	user.ID = id
 	return err
 
 }
 
-func (user User) ValidateLogin() error {
+func (user *User) ValidateLogin() error {
 	query := `SELECT id, password FROM users WHERE email = ?`
 	row := db.DB.QueryRow(query, user.Email)
 

@@ -51,6 +51,7 @@ func createEvent(context *gin.Context) {
 	}
 
 	userId, err := utils.VerifyToken(token)
+	fmt.Println(userId)
 
 	if err != nil {
 		context.JSON(http.StatusUnauthorized, gin.H{"message": "Not Authorized !"})
@@ -68,6 +69,7 @@ func createEvent(context *gin.Context) {
 
 	// event.ID = 1 This is autoincreament in db
 	event.UserID = userId
+	fmt.Println(event.UserID)
 
 	err = event.Save()
 
