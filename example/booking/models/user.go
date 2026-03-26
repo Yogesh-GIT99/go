@@ -4,7 +4,6 @@ import (
 	"booking/db"
 	"booking/utils"
 	"errors"
-	"fmt"
 )
 
 type User struct {
@@ -37,7 +36,6 @@ func (user *User) Save() error {
 
 	id, err := result.LastInsertId()
 
-	fmt.Println("userID Save func: ", id)
 	user.ID = id
 	return err
 

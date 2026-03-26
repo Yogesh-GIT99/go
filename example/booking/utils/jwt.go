@@ -2,7 +2,6 @@ package utils
 
 import (
 	"errors"
-	"fmt"
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
@@ -65,7 +64,6 @@ func VerifyToken(token string) (int64, error) {
 
 	// email := Claims["email"].(string)
 	userId := int64(claims["userId"].(float64)) // way to retrive claim value
-	fmt.Println("verify token func userid", userId)
 
 	return userId, nil // now after all the check it is proved that the token is valid.
 

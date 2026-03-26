@@ -2,7 +2,6 @@ package models
 
 import (
 	"booking/db"
-	"fmt"
 	"time"
 )
 
@@ -27,8 +26,6 @@ func (e *Event) Save() error {
 	}
 
 	defer stmt.Close() // connec closing managed by go itself
-
-	fmt.Println("save event", e.UserID)
 
 	result, err := stmt.Exec(e.Name, e.Description, e.Location, e.Datetime, e.UserID)
 

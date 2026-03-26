@@ -1,5 +1,6 @@
-PUT http://localhost:8080/event/2
+PUT http://localhost:8080/event/6
 content-type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdXRlbGFAZ21haWwuY29tIiwiZXhwIjoxNzc0NTAzNDY4LCJ1c2VySWQiOjF9.UkNn4TooYldGjfwr6vwRXuc6JnPhgxv40r-4Yh6O6ws
 
 {
     "name": "Garima",
