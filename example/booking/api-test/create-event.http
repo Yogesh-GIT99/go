@@ -1,6 +1,6 @@
 POST http://localhost:8080/events
 content-type: application/json
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdXRlbGEyQGdtYWlsLmNvbSIsImV4cCI6MTc3NDQ2NzI0OSwidXNlcklkIjozfQ.OKdA0TYGegeXkRGFtMAdXtThl2SBW97IChKUU21arLo
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdXRlbGEyQGdtYWlsLmNvbSIsImV4cCI6MTc3NDQ5NjQ0NSwidXNlcklkIjozfQ.cX8tRqa1D582OptbHpGY6kKIVWzFvhJOMj4yLhq1mwM
 
 {
     "name": "SId",
