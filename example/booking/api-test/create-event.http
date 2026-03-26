@@ -1,10 +1,10 @@
 POST http://localhost:8080/events
 content-type: application/json
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdXRlbGEyQGdtYWlsLmNvbSIsImV4cCI6MTc3NDQ5NjQ0NSwidXNlcklkIjozfQ.cX8tRqa1D582OptbHpGY6kKIVWzFvhJOMj4yLhq1mwM
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdXRlbGExQGdtYWlsLmNvbSIsImV4cCI6MTc3NDU1NTcxMywidXNlcklkIjoyfQ.sxhUVUX4G2f4w8pxrfJ_vGnh8LpbWNiOndDMp2QyQm8
 
 {
-    "name": "Ritvik",
-    "description": "Sixth test event",
+    "name": "Yogesh",
+    "description": "Second test event",
     "location": "delhi",
     "dateTime": "2025-01-02T15:30:00.000Z"
 }
