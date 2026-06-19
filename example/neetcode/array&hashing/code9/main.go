@@ -1,3 +1,9 @@
+// Given an array of integers nums, return the length of the longest consecutive sequence of elements that can be formed.
+
+// A consecutive sequence is a sequence of elements in which each element is exactly 1 greater than the previous element. The elements do not have to be consecutive in the original array.
+
+// You must write an algorithm that runs in O(n) time.
+
 package main
 
 import (
@@ -40,3 +46,7 @@ func longestConsecutive(nums []int) int {
 	}
 	return longest
 }
+
+// Hashset firstO(1) lookup — makes the inner walk O(n) total, not O(n²)!
+// set[num-1] gateGuarantees you only walk each sequence once from its head
+// Inner walk is O(n) total across all iterationsEach number is visited at most twice — once in outer loop, once in inner

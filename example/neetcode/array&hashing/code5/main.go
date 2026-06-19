@@ -32,7 +32,7 @@ func topKFrequent(nums []int, k int) []int {
 		}
 		result[i] = number
 		delete(m, number)
-		fmt.Println(m)
+		fmt.Println(m, result)
 	}
 
 	return result

@@ -34,3 +34,13 @@ func productExceptSelf(nums []int) []int {
 
 	return output
 }
+
+// output[i] = (everything left of i) × (everything right of i)
+// nums:    [a,  b,  c,  d]
+
+// prefix:  [1,  a,  ab, abc]   ← left pass
+// suffix:  [bcd,cd, d,  1  ]   ← right pass
+
+// output:  [1×bcd, a×cd, ab×d, abc×1]
+//           = everything except self
+// Pattern - "Two-directional accumulation" — when each answer depends on both sides and you can't recompute per element (O(n²)) and can't divide
