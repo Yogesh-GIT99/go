@@ -12,30 +12,20 @@ func main() {
 
 func maxProfit(prices []int) int {
 
-	l := 0
-	r := len(prices) - 1
+	l := 0 // need to search of cheapest day to buy
 	maxProfit := 0
 
-	for l < r {
+	for r := l + 1; r < len(prices)-1; r++ {
+		if prices[r] < prices[l] {
+			l = r // found the cheapest price to buy
+		} else {
+			profit := prices[r] - prices[l]
 
-		profit := prices[r] - prices[l]
-
-		// if prices[r] > prices[r+1] {
-		// 	l++
-		// 	continue
-		// }
-
-		if profit < 0 {
-			l++
-			continue
+			if profit > maxProfit {
+				maxProfit = profit
+			}
 		}
-
-		if profit > maxProfit {
-			maxProfit = profit
-		}
-
-		r--
-		fmt.Println("left: ", l, "right:", r)
 	}
+
 	return maxProfit
 }
