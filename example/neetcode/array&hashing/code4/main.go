@@ -78,3 +78,7 @@ func groupAnagrams(strs []string) [][]string {
 
 // 	return result
 // }
+
+// Pattern name: Hash map with a canonical key.
+// When grouping items that are "equivalent" but not identical,
+// transform each item into a standard form and use that as a hash map key.

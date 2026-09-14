@@ -32,3 +32,7 @@ func isAnagram(s string, t string) bool {
 	return true
 
 }
+
+// Pattern: frequency counting
+// fixed 26-slot array if the alphabet is constrained, map otherwise
+// count characters and compare.

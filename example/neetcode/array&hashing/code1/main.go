@@ -1,5 +1,6 @@
 // Contains Duplicate O(n), O()
 // Given an integer array nums, return true if any value appears more than once in the array, otherwise return false.
+
 package main
 
 import "fmt"
@@ -23,3 +24,6 @@ func hasDuplicate(nums []int) bool {
 	return false
 
 }
+
+// pattern: have I seen this before ? map
+// Insert as you scan, return the moment a value is already present

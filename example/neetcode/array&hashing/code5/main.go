@@ -38,3 +38,9 @@ func topKFrequent(nums []int, k int) []int {
 	return result
 
 }
+
+// Pattern name: Count, then select — with bucket sort by frequency.
+// When you need the top/bottom k by some count,
+// first build a frequency map, then use the count itself as an array index instead of sorting.
+// The obvious move is to sort the frequency map — that's O(n log n). The lesson is that you don't need to sort,
+//  because a count can never exceed n (an element can't appear more times than the array's length).
