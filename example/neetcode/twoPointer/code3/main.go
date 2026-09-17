@@ -57,3 +57,5 @@ func threeSum(nums []int) [][]int {
 
 	return result
 }
+
+// pattern: sort, then fix one element and run two pointers on the rest. That turns an O(n³) brute force into O(n²)
