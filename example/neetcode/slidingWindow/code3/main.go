@@ -42,3 +42,6 @@ func characterReplacement(s string, k int) int {
 	return longest
 
 }
+
+// Pattern: variable window with a validity condition instead of a duplicate check. Window is valid when windowLength - countOfMostFrequentChar <= k — i.e.
+// the characters you'd have to replace fit within your budget. Shrink when it isn't.

@@ -34,3 +34,6 @@ func lengthOfLongestSubstring(s string) int {
 
 	return longest
 }
+
+// Pattern: variable-size window, shrink on violation. Expand right, and when the incoming character is already in the window,
+//  shrink from the left until it isn't. Track the max length as you go.

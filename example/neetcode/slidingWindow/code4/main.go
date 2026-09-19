@@ -44,3 +44,6 @@ func checkInclusion(s1 string, s2 string) bool {
 
 	return false
 }
+
+// Pattern: fixed-size window, slide and compare.
+// much similar to the anagram problem in arrays.

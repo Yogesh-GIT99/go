@@ -29,3 +29,6 @@ func maxProfit(prices []int) int {
 
 	return maxProfit
 }
+
+// Pattern: single pass tracking a running minimum.
+//  Keep the cheapest price seen so far; at each day compute price - minSoFar and keep the best.
