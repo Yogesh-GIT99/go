@@ -1,20 +1,20 @@
 # NeetCode — DSA practice
 
-> Status doc for the Smart Task Dashboard agent. Context: **Learning**. _Last updated: 2026-07-13._
+> Status doc for the Smart Task Dashboard agent. Context: **Learning**. _Last updated: 2026-09-24._
 
 ## ✅ Done
 - **Arrays & Hashing** — finished all 9: Contains Duplicate, Valid Anagram, Two Sum, Group Anagrams, Top K Frequent, Encode/Decode Strings, Products Except Self, Valid Sudoku, Longest Consecutive Sequence.
 - **Two Pointers** — solved all 5: Valid Palindrome, Two Sum II, 3Sum, Container With Most Water, Trapping Rain Water.
+- **Sliding Window** — finished all 6: Best Time to Buy/Sell Stock, Longest Substring Without Repeating, Longest Repeating Character Replacement, Permutation in String, Minimum Window Substring, Sliding Window Maximum.
 
 ## 🔄 Ongoing
-- **Sliding Window** — working on it; 4 of 6 done (Best Time to Buy/Sell Stock, Longest Substring Without Repeating, Longest Repeating Character Replacement, Permutation in String). Next: Minimum Window Substring, Sliding Window Maximum.
+- **Stack** — 6 of 7 done (Valid Parentheses, Min Stack, Evaluate RPN, Daily Temperatures, Car Fleet, Largest Rectangle in Histogram). Next: Generate Parentheses.
+- **Binary Search** — working on it; 5 of 7 done (Binary Search, Search 2D Matrix, Koko Eating Bananas, Min in Rotated Sorted Array, Time Based Key-Value Store). Next: Search in Rotated Sorted Array, Median of Two Sorted Arrays.
 
 ## 📋 Upcoming
-_Remaining NeetCode 150 patterns, in the standard order (130 problems left after Sliding Window)._
+_Remaining NeetCode 150 patterns, in the standard order (116 problems left after Binary Search)._
 
-- **Stack** (7) — need to start next, right after Sliding Window: Valid Parentheses, Min Stack, Evaluate RPN, Generate Parentheses, Daily Temperatures, Car Fleet, Largest Rectangle in Histogram.
-- **Binary Search** (7) — planned: Binary Search, Search 2D Matrix, Koko Eating Bananas, Min in Rotated Sorted Array, Search in Rotated Sorted Array, Time Based Key-Value Store, Median of Two Sorted Arrays.
-- **Linked List** (11) — planned: Reverse List, Merge Two Lists, LRU Cache, Reorder List, Remove Nth Node, Copy List with Random Pointer, Add Two Numbers, Linked List Cycle, Find Duplicate Number, Merge K Sorted Lists, Reverse Nodes in K-Group.
+- **Linked List** (11) — need to start next, after finishing Stack & Binary Search: Reverse List, Merge Two Lists, LRU Cache, Reorder List, Remove Nth Node, Copy List with Random Pointer, Add Two Numbers, Linked List Cycle, Find Duplicate Number, Merge K Sorted Lists, Reverse Nodes in K-Group.
 - **Trees** (15) — planned: Invert Tree, Max Depth, Diameter, Balanced Tree, Same Tree, Subtree, LCA of BST, Level Order Traversal, Right Side View, Good Nodes, Validate BST, Kth Smallest in BST, Build Tree from Preorder/Inorder, Max Path Sum, Serialize & Deserialize.
 - **Tries** (3) — planned: Implement Trie, Design Add & Search Words, Word Search II.
 - **Heap / Priority Queue** (7) — planned: Kth Largest in Stream, Last Stone Weight, K Closest Points, Kth Largest in Array, Task Scheduler, Design Twitter, Find Median from Data Stream.
