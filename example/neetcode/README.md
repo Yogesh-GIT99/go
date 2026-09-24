@@ -11,11 +11,11 @@
 - **Revision 1: Sliding Window** — re-read 4.
 
 ## 🔄 Ongoing
-- **Revision 1 (read)** — working on it; 3 of 5 patterns done. Now on **Stack** (6). Next: **Binary Search** (6). Target: 2026-10-08.
+- **Revision 1 (read)** — working on it; 3 of 5 patterns done. Now on **Stack** (6). Next: **Binary Search** (6).
 
 ## 📋 Upcoming
-- **Revision 2 (write)** — need to rewrite all 29 non-hard problems from scratch, pattern by pattern, without looking. Target: 2026-10-22.
-- **Revision 3 (write)** — need to rewrite all 29 from scratch again; focus on the ones missed in Revision 2. Target: 2026-11-05.
+- **Revision 2 (write)** — need to rewrite all 29 non-hard problems from scratch, pattern by pattern, without looking.
+- **Revision 3 (write)** — need to rewrite all 29 from scratch again; focus on the ones missed in Revision 2.
 
 ### Backlog
 _Parked until the 3 revisions are done; will decide later. 121 problems: the 5 excluded hards plus the rest of NeetCode 150 (116)._
