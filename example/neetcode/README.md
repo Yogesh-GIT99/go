@@ -2,21 +2,20 @@
 
 > Status doc for the Smart Task Dashboard agent. Context: **Learning**. _Last updated: 2026-09-24._
 
-**Plan (changed 2026-09-24):** study NeetCode up to Binary Search (5 patterns, 34 problems), then revise all 34 three times: once by reading, twice by writing the code again. Everything after Binary Search is in the backlog. Target dates assume about 3 problems a week, based on the Aug–Sep pace.
+**Plan:** study NeetCode up to Binary Search (5 patterns, 34 problems), then do 3 revision passes: once by reading, twice by writing the code again. **Hard questions are skipped in revisions** (Trapping Rain Water, Minimum Window Substring, Sliding Window Maximum, Largest Rectangle in Histogram, Median of Two Sorted Arrays), which leaves 29 problems per pass. Everything after Binary Search is in the backlog.
 
 ## ✅ Done
-- **Arrays & Hashing** — finished all 9: Contains Duplicate, Valid Anagram, Two Sum, Group Anagrams, Top K Frequent, Encode/Decode Strings, Products Except Self, Valid Sudoku, Longest Consecutive Sequence.
-- **Two Pointers** — solved all 5: Valid Palindrome, Two Sum II, 3Sum, Container With Most Water, Trapping Rain Water.
-- **Sliding Window** — finished all 6: Best Time to Buy/Sell Stock, Longest Substring Without Repeating, Longest Repeating Character Replacement, Permutation in String, Minimum Window Substring, Sliding Window Maximum.
+- **Study: all 5 patterns** — finished all 34, hard ones included: Arrays & Hashing (9), Two Pointers (5), Sliding Window (6), Stack (7), Binary Search (7).
+- **Revision 1: Arrays & Hashing** — re-read all 9.
+- **Revision 1: Two Pointers** — re-read 4 (skipped the hard one, Trapping Rain Water).
+- **Revision 1: Sliding Window** — re-read 4 (skipped the hard ones, Minimum Window Substring and Sliding Window Maximum).
 
 ## 🔄 Ongoing
-- **Stack** — 6 of 7 done (Valid Parentheses, Min Stack, Evaluate RPN, Daily Temperatures, Car Fleet, Largest Rectangle in Histogram). Next: Generate Parentheses. Target: 2026-09-28.
-- **Binary Search** — working on it; 5 of 7 done (Binary Search, Search 2D Matrix, Koko Eating Bananas, Min in Rotated Sorted Array, Time Based Key-Value Store). Next: Search in Rotated Sorted Array, Median of Two Sorted Arrays. Target: 2026-10-01.
+- **Revision 1 (read)** — working on it; 3 of 5 patterns done. Now on **Stack** (6, skipping Largest Rectangle in Histogram). Next: **Binary Search** (6, skipping Median of Two Sorted Arrays). Target: 2026-10-08.
 
 ## 📋 Upcoming
-- **Revision 1 (read)** — need to re-read all 34 solutions and pattern notes; don't write any code. Target: 2026-10-08.
-- **Revision 2 (write)** — need to rewrite all 34 from scratch, pattern by pattern, without looking. Target: 2026-10-22.
-- **Revision 3 (write)** — need to rewrite all 34 from scratch again; focus on the ones missed in Revision 2. Target: 2026-11-05.
+- **Revision 2 (write)** — need to rewrite all 29 non-hard problems from scratch, pattern by pattern, without looking. Target: 2026-10-22.
+- **Revision 3 (write)** — need to rewrite all 29 from scratch again; focus on the ones missed in Revision 2. Target: 2026-11-05.
 
 ### Backlog
 _Parked until the 3 revisions are done; will decide later. 116 problems (rest of NeetCode 150)._
